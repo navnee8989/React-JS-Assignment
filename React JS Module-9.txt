@@ -1,0 +1,365 @@
+1.											What is React Js?
+
+==>
+	ReactJS is an open-source JavaScript library developed by Facebook for building user interfaces. It allows developers to create reusable UI components and manage the state of those components efficiently. ReactJS follows a declarative programming style, which means that developers can describe the desired outcome and let React handle the implementation details.
+
+	One of the key features of React is its ability to handle complex UI updates efficiently. React uses a virtual DOM (Document Object Model) to represent the current state of the UI and updates only the parts that need to be changed, without affecting the rest of the UI. This makes React fast and efficient, even for complex applications.
+
+React is widely used for building single-page applications (SPAs), mobile applications, and desktop applications. It is also often used with other popular libraries and frameworks, such as Redux, React Native, and Next.js.
+
+
+											2.What is NPM in React Js?
+
+==>NPM (Node Package Manager) is a package manager for JavaScript, used to install and manage third-party packages and dependencies for a project. ReactJS is often used with NPM to manage its dependencies and install packages.
+
+When developing a ReactJS application, you can use NPM to install and manage various packages that provide additional functionality or features. For example, you can use NPM to install packages for routing, state management, testing, styling, and more. NPM makes it easy to manage these packages and their versions, as well as update them as needed.
+
+To use NPM with ReactJS, you need to have Node.js installed on your system. Once Node.js is installed, you can use the NPM command-line interface (CLI) to initialize a new React project, install packages, and start the development server. The package.json file in a ReactJS project contains information about the project's dependencies and scripts to manage those dependencies.
+
+
+
+
+
+3.									*	What is Role of Node Js in react Js?  *
+
+
+==>Node.js is a JavaScript runtime environment that allows developers to run JavaScript code outside of a web browser, on a server or a local machine. It is often used in conjunction with ReactJS to create full-stack JavaScript applications.
+
+Node.js can be used as a backend server for a ReactJS application, providing an API for client-side requests and serving up dynamic content. This allows developers to build powerful, scalable web applications entirely in JavaScript, from the frontend to the backend.
+
+Some of the key roles of Node.js in a ReactJS application include:
+
+    Building a server: Node.js can be used to create a backend server that handles HTTP requests and provides data to the ReactJS frontend.
+
+    API development: Node.js can be used to develop RESTful APIs that can be consumed by the ReactJS frontend to retrieve data or perform actions on the server.
+
+    Server-side rendering: Node.js can be used to implement server-side rendering of React components, which can improve the performance and SEO of the application.
+
+    Build and deployment: Node.js can be used to automate the build and deployment process of a ReactJS application, making it easier to deploy updates and new features.
+
+Overall, Node.js plays a critical role in the development of full-stack JavaScript applications, allowing developers to create powerful and scalable applications using a unified programming language and toolset.
+
+
+4.			*	What is CLI command In React Js?  *
+
+==>CLI (Command Line Interface) commands are used in ReactJS to automate common tasks, such as creating a new project, running a development server, building and deploying an application, and more. ReactJS comes with its own CLI tool, called "Create React App", that provides a set of pre-configured scripts and tools to help developers get started quickly.
+
+Some of the commonly used CLI commands in ReactJS include:
+
+    npx create-react-app my-app: This command is used to create a new ReactJS project, where "my-app" is the name of the project.
+
+    npm start: This command is used to start the development server for the ReactJS application.
+
+    npm run build: This command is used to create a production-ready build of the ReactJS application.
+
+    npm run test: This command is used to run tests for the ReactJS application.
+
+    npm run eject: This command is used to "eject" from the Create React App setup, which provides more control over the project configuration.
+
+
+5.            *  What is Components in React Js?  *
+
+==>	Components are the building blocks of ReactJS applications. In ReactJS, a component is a modular, reusable piece of code that encapsulates a specific part of a user interface. Components can be combined to create more complex user interfaces, making it easy to build large-scale applications with a consistent design and structure.
+
+There are two types of components in ReactJS:
+
+    Function Components: Function components are defined as functions that take in props (short for "properties") as input and return a React element. They are simple and easy to read and write, making them the preferred choice for many use cases.
+
+    Class Components: Class components are defined as classes that extend the React.Component class. They have more advanced features, such as state management and lifecycle methods, and are typically used for more complex components.
+
+Components can be nested within each other, allowing developers to build complex user interfaces with ease. Components can also receive props as input, which are used to customize their behavior or content.
+
+ReactJS also comes with a set of built-in components, such as div, span, button, and more, which can be used to create basic HTML elements.
+
+
+
+6.  	*  What is Header and Content Components in React Js  *
+
+==>  The Header component and the Content component are usually defined as separate functional or class components, which can be imported and used in other parts of the application. The Header component can contain links or buttons that allow users to navigate to different parts of the application, while the Content component can contain different types of content such as text, images, forms, and other UI elements.
+
+Here is an example of how a Header and a Content component can be defined in ReactJS:
+
+javascript
+
+import React from 'react';
+
+function Header() {
+  return (
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function Content() {
+  return (
+    <main>
+      <h1>Welcome to my website!</h1>
+      <p>This is the main content of the page.</p>
+    </main>
+  );
+}
+
+In this example, the Header component contains a navigation menu with links to different parts of the application, while the Content component contains a heading and a paragraph of text.
+
+
+7.		*  How to install React Js on Windows, Linux Operating System? How to Install
+NPM and How to check version of NPM?
+
+
+==>Installing ReactJS on Windows
+
+    Download and install Node.js from the official website: https://nodejs.org/en/download/
+
+    Open the command prompt and run the following command to install create-react-app globally:
+
+    lua
+
+npm install -g create-react-app
+
+Once the installation is complete, you can create a new ReactJS project by running the following command:
+
+lua
+
+npx create-react-app my-app
+
+Replace "my-app" with the name of your project.
+
+Navigate to the project directory and start the development server by running the following command:
+
+bash
+
+    cd my-app
+    npm start
+
+    This will start the development server and open your project in the browser.
+
+Installing ReactJS on Linux
+
+    Open the terminal and run the following command to install Node.js and npm:
+
+    sql
+
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+
+Run the following command to install create-react-app globally:
+
+lua
+
+sudo npm install -g create-react-app
+
+Once the installation is complete, you can create a new ReactJS project by running the following command:
+
+lua
+
+npx create-react-app my-app
+
+Replace "my-app" with the name of your project.
+
+Navigate to the project directory and start the development server by running the following command:
+
+bash
+
+    cd my-app
+    npm start
+
+    This will start the development server and open your project in the browser.
+
+To check the version of npm installed on your computer, you can run the following command in the command prompt or terminal:
+
+npm -v
+
+
+
+8.	*   How to check version of React Js?  
+
+==>
+
+To check the version of ReactJS installed in your project, you can run the following command in the command prompt or terminal:
+
+npm list react
+
+This will display the version of ReactJS installed in your project, along with the versions of other dependencies. Alternatively, you can also run the following command to display the version of ReactJS specifically:
+
+npm list react version
+
+This will display only the version number of ReactJS installed in your project.
+
+If you want to check the version of ReactJS used in a specific file of your project, you can import ReactJS at the top of the file and log its version to the console using the following code:
+
+javascript
+
+import React from 'react';
+
+console.log(React.version);
+
+This will log the version of ReactJS to the console when the file is executed.
+
+
+
+9.			How to change in components of React Js?
+
+
+==> 
+
+Once you have located the file, you can open it in a text editor or integrated development environment (IDE) and make the desired changes to the component. The changes could be in the form of adding or removing HTML elements, updating styles or classes, or changing the behavior of the component.
+
+After you have made the changes to the component, save the file and the changes will be automatically reloaded in the browser if the development server is running.
+
+Here is an example of how you could make changes to a simple component that displays a heading and a paragraph of text:
+
+javascript
+
+import React from 'react';
+
+function MyComponent() {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is a paragraph of text.</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+
+Suppose you wanted to change the text of the heading and paragraph to something more meaningful. You could make the following changes to the component:
+
+javascript
+
+import React from 'react';
+
+function MyComponent() {
+  return (
+    <div>
+      <h1>Welcome to my website!</h1>
+      <p>This is the main content of the page.</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+
+After you save the changes and the development server reloads the component, you should see the updated text displayed in the browser.
+
+
+
+10.		How to Create a List View in React Js?
+
+
+==>
+import React from 'react';
+
+function ListView(props) {
+  const items = props.data.map(item => (
+    <li key={item.id}>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+    </li>
+  ));
+
+  return (
+    <ul>
+      {items}
+    </ul>
+  );
+}
+
+export default ListView;
+
+
+
+import React from 'react';
+import ListView from './ListView';
+
+function App() {
+  const data = [
+    { id: 1, title: 'Item 1', description: 'Description of item 1' },
+    { id: 2, title: 'Item 2', description: 'Description of item 2' },
+    { id: 3, title: 'Item 3', description: 'Description of item 3' }
+  ];
+
+  return (
+    <div>
+      <h1>List View Example</h1>
+      <ListView data={data} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+11.  Create Increment decrement state change by button click?
+
+
+import React, { Component } from "react";
+import "./App.css";
+
+export default class App extends Component {
+      constructor(){
+        super()
+        this.state = {
+              count: 0
+        };
+
+      }
+      increment = () => {
+        this.setState({count:this.state.count + 1})
+      }
+      decrement = () => {
+        this.setState({count:this.state.count - 1})
+      }
+      Reset = () => {
+        this.setState({count:this.state.count === 0})
+      }
+  render() {
+    
+    return (
+      <>
+        <div className="container">
+          <div className="data">
+            <div className="screen w-32 h-14 bg-slate-400 text-center" aria-valuemax={0}>
+              {this.state.count}
+            </div>
+            <div className="btn">
+              <button onClick={this.increment} className="p-5">increment</button>
+              <button onClick={this.decrement} className="p-5">decrement</button>
+              <button onClick={this.Reset} className="p-5">Reset</button>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
