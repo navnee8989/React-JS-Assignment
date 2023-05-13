@@ -1,0 +1,98 @@
+1.Create React app with modules and lazy loading (Admin-user module with
+child Router and outlet)
+
+
+==>Step 1: Create a new React project
+Create a new React project using create-react-app or any other preferred method.
+
+Step 2: Create Modules folder
+Create a new folder called "modules" in your project directory. This folder will hold all of your modules.
+
+Step 3: Create Admin-User Module
+Create a new folder called "adminUser" inside the "modules" folder. This folder will hold the files for your Admin-User module.
+
+Inside the "adminUser" folder, create a new file called "index.js". This file will hold your module's router configuration.
+
+In the "index.js" file, import the necessary dependencies and create your module's router configuration. Here's an example:
+
+js
+
+import React from 'react';
+import { Switch, Route, NavLink } from 'react-router-dom';
+
+const AdminUser = () => {
+  return (
+    <div>
+      <h2>Admin-User Module</h2>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/admin-user/users">Users</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin-user/settings">Settings</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path="/admin-user/users">
+          <h3>Users Page</h3>
+        </Route>
+        <Route exact path="/admin-user/settings">
+          <h3>Settings Page</h3>
+        </Route>
+      </Switch>
+    </div>
+  );
+};
+
+export default AdminUser;
+
+Step 4: Use outlet
+Create a new file called "Outlet.js" inside the "modules" folder. This file will act as your module's outlet.
+
+In the "Outlet.js" file, import the necessary dependencies and create a function that will render your module's content. Here's an example:
+
+js
+
+import React from 'react';
+import { Route } from 'react-router-dom';
+import AdminUser from './adminUser';
+
+const Outlet = () => {
+  return (
+    <div>
+      <Route path="/admin-user" component={AdminUser} />
+    </div>
+  );
+};
+
+export default Outlet;
+
+Step 5: Lazy load modules
+In your main "App.js" file, import the "lazy" and "Suspense" functions from React and import your "Outlet" component.
+
+Use the "lazy" function to dynamically import your module files. Wrap the "Outlet" component with a "Suspense" component to handle the loading state.
+
+Here's an example:
+
+js
+
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.css';
+const Outlet = lazy(() => import('./modules/Outlet'));
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route path="/admin-user" component={Outlet} />
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
