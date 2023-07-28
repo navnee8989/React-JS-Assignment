@@ -10,7 +10,7 @@ const AdminPanel = () => {
 <div className="container">
         <div className="row">
                 <div className="col">
-                        <Link to='Pages'>Pages</Link>
+                        <Link to='Admin'>Admin</Link>
                 </div>
                <Outlet></Outlet>
         </div>

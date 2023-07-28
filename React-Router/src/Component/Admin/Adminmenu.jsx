@@ -17,20 +17,20 @@ const View = styled.div`
     width:100%;
 `;
 
-const PageMenu = () => {
+const Adminmenu = () => {
   return (
     <>
     <div className="Container d-flex justify-between items-center">
       <Manubar>
         <ol>
           <li>
-            <Link to="User">User</Link>
+            <Link to="Admindashboard">Admindashboard</Link>
           </li>
           <li>
             <Link to="Admin">Admin</Link>
           </li>
           <li>
-            <Link to="Login">Login Page</Link>
+            <Link to="Adminedit">Adminedit page</Link>
           </li>
         </ol>
       </Manubar>
@@ -43,4 +43,4 @@ const PageMenu = () => {
   );
 };
 
-export default PageMenu;
+export default Adminmenu;

@@ -3,7 +3,9 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import AdminPanel from "./AdminPanel";
 import { Suspense } from "react";
-const Pages = React.lazy(()=>import("./Component/Pages/PageRouting"))
+// const Admin = React.lazy(()=>import("./Component/Admin/Adminrouting"))
+
+const Admin = React.lazy(()=>import('./Component/Admin/Adminrouting'))
 const MainRouting = createBrowserRouter([
   {
     path:"/",
@@ -18,8 +20,8 @@ const MainRouting = createBrowserRouter([
     element:<AdminPanel/>,
     children:[
       {
-        path:"Pages/*",
-        element:<Suspense fallback={<h1>Loading..</h1>}><Pages/></Suspense>,
+        path:"Admin/*",
+        element:<Suspense fallback={<h1>Loading..</h1>}><Admin/></Suspense>,
       }
     ]
   }
