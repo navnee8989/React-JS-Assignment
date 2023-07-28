@@ -3,9 +3,13 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import AdminPanel from "./AdminPanel";
 import { Suspense } from "react";
+<<<<<<< HEAD
 // const Admin = React.lazy(()=>import("./Component/Admin/Adminrouting"))
 
 const Admin = React.lazy(()=>import('./Component/Admin/Adminrouting'))
+=======
+const Pages = React.lazy(()=>import("./Component/Pages/PageRouting"))
+>>>>>>> 05b544bc74cb53b5da2d0e1b8128dcff88daea2a
 const MainRouting = createBrowserRouter([
   {
     path:"/",
@@ -20,8 +24,13 @@ const MainRouting = createBrowserRouter([
     element:<AdminPanel/>,
     children:[
       {
+<<<<<<< HEAD
         path:"Admin/*",
         element:<Suspense fallback={<h1>Loading..</h1>}><Admin/></Suspense>,
+=======
+        path:"Pages/*",
+        element:<Suspense fallback={<h1>Loading..</h1>}><Pages/></Suspense>,
+>>>>>>> 05b544bc74cb53b5da2d0e1b8128dcff88daea2a
       }
     ]
   }
